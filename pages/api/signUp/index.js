@@ -1,4 +1,3 @@
-import { hashPassword } from "@/utils/auth";
 import { serialize } from "cookie";
 import { sign } from "jsonwebtoken";
 
@@ -7,7 +6,12 @@ export default async function handler(req, res) {
   let expiration = 7 * 24 * 60 * 60;
 
   // validation
-  if (!email || !password || !name) {
+  if (
+    !email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ||
+    !email ||
+    !password ||
+    !name
+  ) {
     return res.status(442).json({
       status: "feild",
       message: "name or email or password in not valid",

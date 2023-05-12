@@ -1,16 +1,19 @@
 import Error from "@/components/elements/Error";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function SendMessage({ user }) {
   let [text, setText] = useState("");
   let [showMessage, setShowMessage] = useState(false);
+  let router = useRouter();
 
   let submitHandler = async () => {
+    event.preventDefault();
+
     if (!text) return setShowMessage(true);
     setShowMessage(false);
 
-    event.preventDefault();
-
+    window.location.reload();
     let res = await fetch("/api/sendMessage", {
       method: "POST",
       body: JSON.stringify({

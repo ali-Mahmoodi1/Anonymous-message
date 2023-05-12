@@ -9,7 +9,7 @@ export default function Messages({ messages }) {
     <div className="min-h-[80vh] container px-4 mx-auto mt-20">
       <>
         <div className=" flex justify-between items-center gap-3">
-          <h1 className=" text-xl font-bold ">پیام ها</h1>
+          <h1 className=" text-xl font-bold ">پیام ها :</h1>
         </div>
         <div className="">
           {messages.map((message) => (

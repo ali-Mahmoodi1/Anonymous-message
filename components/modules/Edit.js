@@ -44,7 +44,7 @@ export default function Edit({ data }) {
           showPass={{ show: false }}
           showName={{ show: true, name, setName }}
         />
-        <FormBtn content="ثبت نام" />
+        <FormBtn content="ویرایش" />
       </form>
       {showMessage && <Error data={{ message, setShowMessage }} />}
     </div>
