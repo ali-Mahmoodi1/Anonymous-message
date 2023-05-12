@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-    font-family: "cazabelanca";
-}
-
 .header__link {
     background: linear-gradient(to right, #fff 50%, #202020 50%);
     -webkit-text-fill-color: transparent;
@@ -17,9 +13,4 @@ html{
 
 .header__link:hover {
     background-position-x: right;
-}
-
-@font-face {
-    font-family: "cazabelanca";
-    src: url(/public/cazabelanka.ttf);
 }

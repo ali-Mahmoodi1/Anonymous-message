@@ -18,9 +18,6 @@ module.exports = {
       },
       backgroundImage: {
         login: "url(/images/siuuu.webp)",
-      },
-      fontFamily:{
-        
       }
     },
   },
